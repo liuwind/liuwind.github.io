@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./01.css">
+    <style>
+        body {
+            padding-top: 53px;
+        }
+
+        .mynavbar {
+            background: #cc6699;
+        }
+
+      
+
+        .bigImg {
+            background: #cc6699;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="mynavbar navbar navbar-expand-lg navbar-light fixed-top">
+        <!-- 版心容器 -->
+        <div class="container">
+
+            <!-- logo部分 -->
+            <a class="navbar-brand" href="#">Sass中文网</a>
+
+            <!-- 汉堡图标 折叠图标 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 导航连接 -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">安装</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">快速入门</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">中文文档</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">常见问题</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">使用技巧</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sass在线转换</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">关于</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </a>
+                        <div class="dropdown-menu text-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">繁體中文</a>
+                            <a class="dropdown-item" href="#">English</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 大图层 -->
+    <div class="bigImg py-5 text-center">
+        <img src="./images/sass.png" class="img-fluid" />
+        <p class="text-white lead my-3">世界上最成熟、最稳定、最强大的专业级CSS扩展语言！</p>
+        <a href="#" class="btn">安装Sass</a>
+    </div>
+
+    <!-- 特色层 -->
+    <div class="feature container">
+        <div class="row">
+            <div class="col-lg-4 mt-5">
+                <h2>兼容CSS</h2>
+                <p>Sass完全兼容所有版本的CSS。我们对此严格把控，所以你可以无缝地使用任何可用的CSS库。</p>
+            </div>
+
+            <div class="col-lg-4 mt-5">
+                <h2>特性丰富</h2>
+                <p>Sass拥有比其他任何CSS扩展语言更多的功能和特性。Sass核心团队不懈努力，一直使其保持领先地位。</p>
+            </div>
+            <div class="col-lg-4 mt-5">
+                <h2>成熟</h2>
+                <p>Sass已经经过其核心团队超过13年的精心打造。</p>
+            </div>
+            <div class="col-lg-4 mt-5">
+                <h2>行业认可</h2>
+                <p>一次又一次地，行业把Sass作为首选CSS扩展语言。</p>
+            </div>
+            <div class="col-lg-4 mt-5">
+                <h2>社区庞大</h2>
+                <p>数家科技企业和成百上千名开发者为Sass提供支持。</p>
+            </div>
+            <div class="col-lg-4 mt-5">
+                <h2>框架</h2>
+                <p>有无数的框架使用Sass构建。比如Compass，Bourbon，和Susy。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 合作伙伴 -->
+    <div class="partner container text-center">
+        <h2>合作伙伴</h2>
+        <p>COOPERATIVE PARTNER</p>
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-4 col-xl-3 mt-5"><img src="./images/1.png" /></div>
+            <div class="col-6 col-md-4 col-xl-3 mt-5"><img src="./images/2.png" /></div>
+            <div class="col-6 col-md-4 col-xl-3 mt-5"><img src="./images/3.png" /></div>
+            <div class="col-6 col-md-4 col-xl-3 mt-5"><img src="./images/4.png" /></div>
+        </div>
+
+
+        
+    </div>
+
+    <hr class="mt-5" />
+
+    <div class="footer text-center pt-3 pb-4">Sass中文网（Sass中国）©2017 - 友情链接 - 文章/教程征集 - 闽ICP备13012724号-5</div>
+</body>
+
+</html>
