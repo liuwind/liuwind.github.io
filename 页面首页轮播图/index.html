@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style:none;
+        }
+        img{
+        	vertical-align: bottom;
+        }
+        .box{
+            height: 380px;
+            width: 820px;
+            margin:100px auto;
+            overflow: hidden;
+        }
+        .box .img_list{
+        	width: 500%;
+        	height: 340px;
+        }
+        .box .img_list li{
+        	float: left;
+        	width: 820px;
+        	height: 340px;
+        }
+        .box .title_list{
+        	height: 40px;
+        	background: #e3e2e2;
+        }
+        .box .title_list span{
+        	float: left;
+        	width: 205px;
+        	text-align: center;
+        	height: 38px;
+        	line-height: 38px;
+        	border-bottom: 2px solid #e3e2e2;
+            cursor: pointer;
+            font-size:14px;
+        }
+        .box .title_list span.current{
+            background: #f7f6f6;
+            color: #ab8e66;
+            border-bottom: 2px solid #cea861;
+        }
+        span{
+            width: 205px;
+        }
+        .box img{
+            width: 820px;
+            height: 340px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    	<ul class="img_list">
+    		<li><a href="#"><img src="./images/联想截图_20230320190854.png"/></a></li>
+    		<li><a href="#"><img src="./images/联想截图_20230320191107.png"/></a></li>
+    		<li><a href="#"><img src="./images/联想截图_20230320191145.png"/></a></li>
+    		<li><a href="#"><img src="./images/联想截图_20230320191224.png"/></a></li>
+    		
+    	</ul>
+    	<div class="title_list">
+    		<span class="current"> <a href="https://liuwind.github.io/es6/index.html"> 中文网</a></span>
+    		<span>  <a href="https://liuwind.github.io/%E5%AE%87%E5%AE%99%E6%98%9F%E7%90%83%E5%9B%B4%E7%BB%95%E5%A4%AA%E9%98%B3%E6%97%8B%E8%BD%AC/%E5%AE%87%E5%AE%99%E6%98%9F%E7%90%83.html"> 旋转星体</a></span>
+    		<span><a href="https://liuwind.github.io/%E5%95%86%E5%9F%8E/01.html"> 学成网官</a></span>
+    		<span><a href="https://liuwind.github.io/%E6%97%85%E6%B8%B8/index.html"> 旅游</a></span>
+    	
+    	</div>
+    </div>
+       <div>点击导航栏即可进入对应网页</div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        // 鼠标移上.box盒子停止定时器
+        $(".box").on("mouseover",function(){
+            window.clearInterval( timer );
+            timer = null;
+        })
+
+        // 鼠标移出.box盒子重新开启定时器
+        $(".box").on("mouseout",function(){
+            if( timer == null ){
+                timer = setInterval(function(){
+                    currentIndex++;
+                    if( currentIndex == $(".title_list span").length){
+                        currentIndex = 0;
+                    }
+                    goto( currentIndex );
+                },1500)
+            }
+        })
+
+        // 鼠标移上事件
+    	$(".title_list span").on("mouseover",function(){
+            goto( $(this).index() );
+            currentIndex = $(this).index();
+        })
+
+        // 封装一个跳转到指定索引号的函数,索引号从0开始
+        function goto( index ){
+            $(".title_list span").eq(index).addClass("current").siblings().removeClass('current');
+
+            $(".img_list").stop().animate({
+                "marginLeft":-index*$(".box").width()
+            })
+        }
+
+        // 定义一个变量currentIndex保存当前索引号
+        var currentIndex = 0;
+        
+        // 开启定时器
+        var timer = setInterval(function(){
+            currentIndex++;
+            if( currentIndex == $(".title_list span").length){
+                currentIndex = 0;
+            }
+            goto( currentIndex );
+        },1500)
+    </script>
+</body>
+</html>
