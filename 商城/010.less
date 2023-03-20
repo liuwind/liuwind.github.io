@@ -1,0 +1,353 @@
+/*清除默然边距*/
+*{ 
+    padding: 0;
+    margin: 0;
+}
+/*双伪元素清除浮动*/
+.clearfix:after,.clearfix:before{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both; /*清除浮动*/
+}
+.clearfix{ /*ie6 ie7*/
+    *zoom: 1;
+}
+
+/*公共部分*/
+.contener{/*盒子水平居中*/
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*页面头部*/
+body{
+    background-color: #f3f5f7; /*整个页面颜色*/
+}
+
+/*nav导航部分*/
+nav{
+    width: 1366px;
+    height: 42px;
+    margin: 26px auto; /*导航栏水平居中*/
+    /*background-color: #ccc;*/
+}
+/*logo图标*/
+.logo{
+    float: left;
+}
+header{
+    height: 100px;
+    overflow: hidden;
+}
+/*导航栏部分*/
+.navbar{
+    float: left;
+    height: 42px; /*这个高给父亲，子类行高会继承*/
+    line-height: 42px; /*字体垂直居中*/
+    margin-left: 50px;
+}
+.navbar li{
+    float: left; /*让首页  课程这一行显示*/
+}
+.navbar li a{ /*这是a标签的宽高*/
+    padding: 0 10px; /*上下0 左右8像素*/
+    display: block; /* a标签内元素为块级元素*/
+    height: 42px;
+}
+.navbar li a:hover{
+    border-bottom: 2px solid #00a4ff; /*鼠标放入底边框*/
+}
+ul{
+    list-style: none;
+}
+a{
+    color: #050505;
+    text-decoration: none; /*取消下划线*/
+}
+/*搜索框部分开始*/
+    .search {
+        width: 410px;  /* 360 + 50 */
+        height: 38px;
+        border: 1px solid #00a4ff;
+        float: right;
+    }
+    .search input[type=text] {  /* 属性选择器  type 为 text 的文本框 */
+        /* background-color: pink; */
+        width: 360px;
+        height: 38px;
+        float: left;
+        padding-left: 20px;
+    }
+    .search input[type=submit]{/* 属性选择器  type 为 submit 的文本框 */
+        width: 50px;
+        height: 38px;
+        float: left;
+        /*background-color: #00a4ff ;*/
+        background: #00a4ff url(../images/search_06.png) center center no-repeat;
+    }
+    input{
+        border: 0;/*所有表格的边框宽度为0*/
+        box-sizing: border-box; /*css3盒子模型，border和padding都包含在width内部*/
+    }
+/*搜索框部分结束*/
+
+/*个人中心开始*/
+.personal{
+    float: right;
+    height: 42px;
+    line-height: 42px;
+    margin: 0 15px 0 35px; /*上0 右15px 下0 左35px*/
+}
+.personal img{
+    margin: 0 8px;
+}
+/*个人中心结束*/
+/*banner开始*/
+.banner{
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner-in{ /*banner背景图片*/
+    height: 420px;
+    background: url(https://img0.baidu.com/it/u=774108713,2463541882&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500) 0 0 no-repeat;
+    position: relative; /*子绝父相*/
+}
+.slidebar{ /*左侧盒子半透明*/
+    height: 420px;
+    width: 190px;
+    background: rgba(0, 0, 0, .3); /*盒子背景半透明*/
+    float: left;
+}
+.slidebar li a{
+    color: #fff;
+    font-size: 14px;
+    padding: 0 20px;
+    display: block; /*转换块级元素*/
+    /*height: 42px;*/ /*有了行高，不用给高度 */
+    line-height: 42px;
+}
+.slidebar li a:hover {
+    color: #00a4ff;
+}
+.slidebar li a span{ /*右侧箭头*/
+    float: right;
+    font-family: arial;
+}
+.timetable{ /*我的课程表*/
+    float: right;
+    width: 230px;
+    height: 360px;
+    background-color: #FFF;
+    margin-top: 20px;
+}
+.timetable dt{
+    height: 50px;
+    line-height: 50px;
+    background-color: #9bceea;
+    text-align: center; /*文本水平居中*/
+    color: #FFF;
+    font-weight: 700; /*字体加粗*/
+    letter-spacing: 2px; /*字间距为2px*/
+    margin-bottom: 5px;
+}
+.timetable dd{
+    height: 60px;
+    width: 193px;
+    /*line-height: 190px;*/
+    margin: 0 auto; /*水平居中*/
+    border-bottom: 1px solid #ccc; /*下边框线*/
+    padding-top: 12px;
+    box-sizing: border-box; /*css3盒子模型*/
+}
+.timetable dd:last-child{ /*伪类选择器让最后一个孩子border为0*/
+    border: 0;
+}
+.timetable dd h4{
+    font-size: 16px; /*改变字体大小*/
+    font-weight: normal; /*让字体不变粗*/
+    color: #4E4E4E;
+}
+.timetable p{
+    font-size: 14px;
+    color: #a5a5a5;
+}
+.timetable dd a{ /*全部课程*/
+    height: 38px;
+    border: 1px solid #00a4ff;
+    display: block;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-weight: 700; /*文字加粗*/
+}
+/*快捷键ctrl+g快速到某一行*/
+.timetable dd a:hover{
+    background-color: #00a4ff;
+    color: #FFF;
+}
+/*小圆点*/
+/*.banner-in ul*/
+.circle{
+    width: 170px;
+    height: 22px;
+    /*background-color: deeppink;*/
+    position: absolute; /*绝对定位*/
+    bottom: 10px; 
+    left: 50%; /*父盒子宽度的一半*/
+    margin-left: -85px;
+}
+.circle li{ /*0 0 1 1*/
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, .4); /*背景半透明*/
+    margin: 6px 8px;
+    border-radius: 50%; /*圆角*/
+}
+/*当前的圆点*/
+.circle .current{
+    width: 19px;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+/*banner结束*/
+/*精品推荐开始*/
+/*精品推荐*/
+.recommecd{
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+    margin-top: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2); /*盒子阴影*/
+}
+.recommecd a{
+    padding: 0 30px;
+    border-right: 1px solid #ccc;
+}
+.recommecd a:hover{
+    color: #00a4ff;
+}
+.recommecd a:first-child{
+    color: #00a4ff;
+}
+.recommecd a:last-child{
+    color: #00a4ff;
+    border: 0;
+    float: right;
+    font-size: 14px;
+}
+/*精品推荐大模块*/
+.crecom-products{
+    margin-top: 35px; /*距离上边盒子35px*/
+}
+.recom-hd{ /*精品推荐标题高度*/
+    height: 40px;
+}
+.recom-hd h4{
+    float: left;
+    color: #494949;
+}
+.recom-hd a{
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #A5A5A5;
+}
+.recom-hd a:hover{
+    color: #00A4ff;
+}
+/*精品推荐主题部分*/
+.recom-bd ul li {
+        width: 228px;
+        height: 270px;
+        background-color: #fff;
+        overflow: hidden;  /* 溢出隐藏 */
+        /* box-shadow:水平阴影 垂直阴影 模糊距离 阴影尺寸 阴影颜色  内/外阴影； */
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+        float: left;
+        margin-right: 15px; /*从右往左排列，间距在右边*/
+        /*margin-left: 15px;*/
+        margin-top: 15px;
+}
+.recom-bd ul li:nth-child(5n){ /*第五个元素换行*/
+    margin-right: 0;
+}
+.recom-bd ul h5,.recom-bd ul p{
+    margin-top: 12px;
+    padding: 0 20px 0 20px;
+}
+.recom-bd li h5{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+}
+.recom-bd li p{
+    font-size: 12px;
+    color: #999;
+}
+.recom-bd p span{
+    color: #FF7C2D;
+    font-size: 20px;
+}
+/*精品推荐结束*/
+/*页面底部开始*/
+footer{
+    height: 270px;
+    background-color: #FFF;
+    margin-top: 100px;
+}
+.footer-in{
+    padding-top: 30px;
+}
+.footer-l{
+    float: left;
+}
+.footer-r{
+    float: right;
+    color: #333;
+}
+.footer-l p{
+    font-size: 12px;
+    line-height: 18px;
+    color: #888;
+    margin-top: 20px;
+}
+.footer-l a{
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    font-size: 16px;
+    color: #00A4FF;
+    text-align: center;
+    line-height: 33px;
+    margin-top: 15px;
+}
+.footer-l a:hover{
+    background-color: #00A4FF;
+    color: white;
+}
+.footer-r dl{
+    float: left;
+    width: 180px;
+}
+.footer-r dt{
+    font-size: 16px;
+    height: 30px;
+}
+.footer-r dd{
+    font-size: 12px;
+    height: 20px;
+}
+.footer-r dd:hover{
+    color: #00A4FF;
+    text-decoration: underline; /*下划线*/
+}
+/*页面底部结束*/
+.banner-in contener{
+   background: url(https://img0.baidu.com/it/u=774108713,2463541882&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500);
+}
