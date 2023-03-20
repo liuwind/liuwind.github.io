@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .lead ul {
+        display: flex;
+        margin-top: 20px;
+
+    }
+
+    div {
+        display: flex;
+    }
+
+
+    ul {
+        display: flex;
+
+    }
+
+
+    .act {
+        background-color: #35a9fe;
+    }
+
+    .tic {
+        width: 1222px;
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+
+    .tic ul {
+        margin-left: 16px;
+
+    }
+
+    .tic>ul>li {
+        height: 40;
+
+
+        width: 65px;
+        height: 50px;
+        border-radius: 12px;
+        line-height: 50px;
+        text-align: center;
+        margin-left: 5px;
+    }
+
+
+    p {
+        width: 16px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .pic {
+        width: 1222px;
+        margin-left: 100px;
+        background-color: azure;
+        margin-top: 10px;
+    }
+
+    .pic ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .pic img {
+        width: 185px;
+        margin-top: 10px;
+    }
+
+    .pic p {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .pic li {
+        width: 185px;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+
+
+    <div class="tic">
+        <p>题材</p>
+        <ul class="a">
+
+        </ul>
+    </div>
+
+
+    <div class="tic">
+        <p> 地区</p>
+        <ul class="b">
+
+
+        </ul>
+    </div>
+    <div class="tic">
+        <p>进度</p>
+        <ul class="c">
+
+
+
+        </ul>
+    </div>
+    <div class="tic">
+        <p> 收费</p>
+        <ul class="e">
+
+        </ul>
+    </div>
+    <div class="tic">
+        <p>推荐</p>
+        <ul class="d">
+
+
+        </ul>
+    </div>
+
+    </div>
+    <div class="pic">
+        <ul>
+            <li><img src="https://i2.hdslb.com/bfs/archive/5bfa64aa473af2e963e4daee16e8c85205edf4a1.jpg@672w_378h_1c_!web-home-common-cover.webp"
+                    alt=""></li>
+            <li><img src="https://i2.hdslb.com/bfs/archive/5bfa64aa473af2e963e4daee16e8c85205edf4a1.jpg@672w_378h_1c_!web-home-common-cover.webp"
+                    alt=""></li>
+            <li><img src="https://i2.hdslb.com/bfs/archive/5bfa64aa473af2e963e4daee16e8c85205edf4a1.jpg@672w_378h_1c_!web-home-common-cover.webp"
+                    alt=""></li>
+            <li><img src="https://i2.hdslb.com/bfs/archive/5bfa64aa473af2e963e4daee16e8c85205edf4a1.jpg@672w_378h_1c_!web-home-common-cover.webp"
+                    alt=""></li>
+            <li><img src="https://i2.hdslb.com/bfs/archive/5bfa64aa473af2e963e4daee16e8c85205edf4a1.jpg@672w_378h_1c_!web-home-common-cover.webp"
+                    alt=""></li>
+            <li><img src="https://i2.hdslb.com/bfs/archive/5bfa64aa473af2e963e4daee16e8c85205edf4a1.jpg@672w_378h_1c_!web-home-common-cover.webp"
+                    alt=""></li>
+            <li><img src="https://i2.hdslb.com/bfs/archive/5bfa64aa473af2e963e4daee16e8c85205edf4a1.jpg@672w_378h_1c_!web-home-common-cover.webp"
+                    alt=""></li>
+
+        </ul>
+    </div>
+    <script>
+
+        var ticul = document.querySelectorAll(".tic ul");
+
+        var li = document.querySelectorAll("li");
+
+
+
+
+
+        var AllLabel = {
+            // 题材
+            "styles": [
+                {
+                    "id": -1,
+                    "name": "全部"
+                },
+                {
+                    "id": 999,
+                    "name": "热血"
+                },
+                {
+                    "id": 997,
+                    "name": "古风"
+                },
+                {
+                    "id": 1016,
+                    "name": "玄幻"
+                },
+                {
+                    "id": 998,
+                    "name": "奇幻"
+                },
+                {
+                    "id": 1023,
+                    "name": "悬疑"
+                },
+                {
+                    "id": 1002,
+                    "name": "都市"
+                },
+                {
+                    "id": 1096,
+                    "name": "历史"
+                },
+                {
+                    "id": 1092,
+                    "name": "武侠仙侠"
+                },
+                {
+                    "id": 1088,
+                    "name": "游戏竞技"
+                },
+                {
+                    "id": 1081,
+                    "name": "悬疑灵异"
+                },
+                {
+                    "id": 1063,
+                    "name": "架空"
+                },
+                {
+                    "id": 1060,
+                    "name": "青春"
+                },
+                {
+                    "id": 1054,
+                    "name": "西幻"
+                },
+                {
+                    "id": 1048,
+                    "name": "现代"
+                },
+                {
+                    "id": 1028,
+                    "name": "正能量"
+                },
+                {
+                    "id": 1015,
+                    "name": "科幻"
+                }
+            ],
+            // 地区
+            "areas": [
+                {
+                    "id": -1,
+                    "name": "全部"
+                },
+                {
+                    "id": 1,
+                    "name": "大陆"
+                },
+                {
+                    "id": 2,
+                    "name": "日本"
+                },
+                {
+                    "id": 6,
+                    "name": "韩国"
+                },
+                {
+                    "id": 5,
+                    "name": "其他"
+                }
+            ],
+            // 进度
+            "status": [
+                {
+                    "id": -1,
+                    "name": "全部"
+                },
+                {
+                    "id": 0,
+                    "name": "连载"
+                },
+                {
+                    "id": 1,
+                    "name": "完结"
+                }
+            ],
+            // 收费
+            "prices": [
+                {
+                    "id": -1,
+                    "name": "全部"
+                },
+                {
+                    "id": 1,
+                    "name": "免费"
+                },
+                {
+                    "id": 2,
+                    "name": "付费"
+                },
+                {
+                    "id": 3,
+                    "name": "等就免费"
+                }
+            ],
+            // 排序
+            "orders": [
+                {
+                    "id": 0,
+                    "name": "人气推荐"
+                },
+                {
+                    "id": 1,
+                    "name": "更新时间"
+                },
+                {
+                    "id": 2,
+                    "name": "追漫人数"
+                },
+                {
+                    "id": 3,
+                    "name": "上架时间"
+                }
+            ]
+        }
+
+        var style = AllLabel.styles;
+
+        var areas = AllLabel.areas;
+
+        var status1 = AllLabel.status;
+
+        var prices = AllLabel.prices;
+        var orders = AllLabel.orders;
+
+        // function xuan(ul, main) {
+        //     ul.innerHTML = main.map(function (item) {
+        //     return '<li id="'+item.id+'">' + item.name + '</li>'
+        // }).join("")
+        // }
+        //  xuan(ticul, style)
+        //  xuan(ticul,status1)
+        //  xuan(ticul, areas)
+        //  xuan(ticul, prices)
+        //  xuan(ticul, orders)
+
+
+        ticul[0].innerHTML = style.map(function (item) {
+            return '<li id="' + item.id + '">' + item.name + '</li>'
+        }).join("")
+
+        ticul[1].innerHTML = status1.map(function (item) {
+            return '<li id="' + item.id + '">' + item.name + '</li>'
+        }).join("")
+        ticul[2].innerHTML = areas.map(function (item) {
+            return '<li id="' + item.id + '">' + item.name + '</li>'
+        }).join("")
+        ticul[3].innerHTML = prices.map(function (item) {
+            return '<li id="' + item.id + '">' + item.name + '</li>'
+        }).join("")
+        ticul[4].innerHTML = orders.map(function (item) {
+            return '<li ' + item.id + '>' + item.name + '</li>'
+        }).join("")
+
+        var li = document.querySelectorAll("li");
+
+
+        var a = document.querySelectorAll(".a li");
+        var b = document.querySelectorAll(".b li")
+        var c = document.querySelectorAll(".c li")
+        var d = document.querySelectorAll(".d li")
+        var e = document.querySelectorAll(".e li")
+
+
+
+
+        function ab(z) {
+            for (let i = 0; i < z.length; i++) {
+                z[0].classList.add("act")
+                z[i].onclick = function () {
+
+                    for (let j = 0; j < z.length; j++) {
+                        z[j].classList.remove("act")
+
+                    }
+                    this.classList.add("act")
+
+
+
+                     id(this.id)
+
+                    function id(style) {
+                        var ul = document.querySelector(".pic ul");
+                        var xhr = new XMLHttpRequest();
+
+                        xhr.open("GET", "https://apis.netstart.cn/bcomic/ClassPage?styleId=" + style + "&areaId=-1&isFinish=-1&order=0&pageNum=1&pageSize=39&isFree=-1")
+
+                        xhr.send();
+
+                        xhr.onreadystatechange = function () {
+                            // ajax状态为4 并且 http响应状态码为200
+                            if (xhr.readyState === 4 && xhr.status === 200) {
+
+                                var res = JSON.parse(xhr.responseText);
+
+                                var data = res.data;
+                                console.log(data);
+                                ul.innerHTML = data.map(function (item) {
+
+                                    return ' <li><img src="' + item.horizontal_cover + '" alt=""><p>' + item.title + '</p><p></p>'
+                                }).join("")
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        ab(a);
+        ab(b);
+        ab(c);
+        ab(d);
+        ab(e);
+
+
+
+        var ul = document.querySelector(".pic ul");
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "https://apis.netstart.cn/bcomic/ClassPage?styleId=997&areaId=-1&isFinish=-1&order=0&pageNum=1&pageSize=39&isFree=-1")
+
+        xhr.send();
+
+        xhr.onreadystatechange = function () {
+            // ajax状态为4 并且 http响应状态码为200
+            if (xhr.readyState === 4 && xhr.status === 200) {
+
+                var res = JSON.parse(xhr.responseText);
+
+                var data = res.data;
+                console.log(data);
+                ul.innerHTML = data.map(function (item) {
+
+                    return ' <li><img src="' + item.horizontal_cover + '" alt=""><p>' + item.title + '</p><p></p>'
+                }).join("")
+
+            }
+        }
+
+        var lis = document.querySelectorAll("li");
+
+        var a = document.querySelectorAll(".a li");
+
+
+
+        var b = document.querySelectorAll(".b li")
+        var c = document.querySelectorAll(".c li")
+        var d = document.querySelectorAll(".d li")
+        var e = document.querySelectorAll(".e li")
+
+
+        var act = document.querySelectorAll(".act")
+
+        var style = act[0].id;
+
+        var status = act[1].id;
+
+        
+        
+    </script>
+</body>
+
+</html>
