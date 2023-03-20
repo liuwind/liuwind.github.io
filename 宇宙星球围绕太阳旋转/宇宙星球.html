@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            vertical-align: bottom;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            /* background: black; */
+            background: url(./bg.jpg) no-repeat;
+            background-size: 100% 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            /* outline: 3px solid red; */
+            margin: 100px auto;
+            /* 相对定位 */
+            position: relative;
+        }
+
+        .box ul .track {
+            border-radius: 50%;
+
+            /* 绝对定位 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid white;
+        }
+
+        .box ul li:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            animation: xuanzhuan 2s linear infinite;
+        }
+
+        .box ul li:nth-child(2) {
+            width: 360px;
+            height: 360px;
+            animation: xuanzhuan 3s linear infinite;
+        }
+
+        .box ul li:nth-child(3) {
+            width: 320px;
+            height: 320px;
+            animation: xuanzhuan 1.5s linear infinite;
+        }
+
+        .box ul li:nth-child(4) {
+            width: 280px;
+            height: 280px;
+            animation: xuanzhuan 1.5s linear 2s infinite;
+        }
+
+        .box ul li:nth-child(5) {
+            width: 240px;
+            height: 240px;
+            animation: xuanzhuan 5s linear infinite;
+        }
+
+        .box ul li:nth-child(6) {
+            width: 200px;
+            height: 200px;
+            animation: xuanzhuan 2.5s linear infinite;
+        }
+
+        .box ul li:nth-child(7) {
+            width: 160px;
+            height: 160px;
+            animation: xuanzhuan 7s linear infinite;
+        }
+
+        .box ul li:nth-child(8) {
+            width: 120px;
+            height: 120px;
+            animation: xuanzhuan 3.8s linear infinite;
+        }
+
+        .box ul li:nth-child(9) {
+            width: 80px;
+            height: 80px;
+            animation: xuanzhuan 1.2s linear infinite;
+        }
+
+        .box ul .track .star {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        .box .sun {
+            width: 35px;
+            height: 35px;
+            background: yellow;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes xuanzhuan {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <!-- .track表示轨道 -->
+            <!-- .star表示星球 -->
+            <li class="track"><span class="star" style="background:red"></span></li>
+            <li class="track"><span class="star" style="background:blue"></span></li>
+            <li class="track"><span class="star" style="background:orange"></span></li>
+            <li class="track"><span class="star" style="background:pink"></span></li>
+            <li class="track"><span class="star" style="background:skyblue"></span></li>
+            <li class="track"><span class="star" style="background:lightgreen"></span></li>
+            <li class="track"><span class="star" style="background:chocolate"></span></li>
+            <li class="track"><span class="star" style="background:aqua"></span></li>
+            <li class="track"><span class="star" style="background:tomato"></span></li>
+        </ul>
+
+        <!-- 太阳 -->
+        <div class="sun"></div>
+    </div>
+</body>
+
+</html>
